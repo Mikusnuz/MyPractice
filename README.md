@@ -1,6 +1,15 @@
 # Mofas_JSK
 
 ## Junsu Kim(Mofas)
-* º» ÀúÀå¼ÒÀÇ ¸ñÀûÀº ¸ğÆÄ½º¿¡¼­ÀÇ ÇÁ·ÎÁ§Æ® ¹× ÇĞ½ÀÀ» ±â·ÏÇÏ±â À§ÇÔÀÌ´Ù. 
-* »ç³» ±â¹Ğ »çÇ×Àº ÀÏÀı Ä¿¹ÔÇÏÁö ¾Ê´Â´Ù.
-* °³ÀÎ Á¤º¸´Â ÀÏÀı Ä¿¹ÔÇÏÁö ¾Ê´Â´Ù.
+
+# í•™ìŠµ ì™„ë£Œ
+
+IntelliJ
+Zsh
+Oh My Zsh
+MVC Pattern
+MVP Pattern
+MVVM Pattern
+Doxygen
+Graphviz
+Rest API
