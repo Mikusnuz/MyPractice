@@ -4,12 +4,13 @@
 
 # 학습 완료
 
-IntelliJ
-Zsh
-Oh My Zsh
-MVC Pattern
-MVP Pattern
-MVVM Pattern
-Doxygen
-Graphviz
-Rest API
+IntelliJ  
+Zsh  
+Oh My Zsh  
+MVC Pattern  
+MVP Pattern  
+MVVM Pattern  
+Doxygen  
+Graphviz  
+Rest API  
+React  
