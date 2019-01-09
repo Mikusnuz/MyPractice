@@ -1,0 +1,30 @@
+body{
+    display:flex;
+    flex-flow: wrap column;
+    justify-content: center;
+    align-items: center;
+}
+th,td{
+    border:1px solid #BDBDBD;
+    padding:3px;
+}
+th{
+    background-color: #EAEAEA;
+}
+.faker__nav{
+    display:flex;
+    width: 100%;
+    border-bottom:1px solid #EAEAEA;
+    margin:10px;
+}
+.faker__table{
+    border:1px solid #BDBDBD;
+    text-align: left;
+    border-collapse: collapse;
+}
+.faker__title{
+    width:100%;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom:10px;
+}

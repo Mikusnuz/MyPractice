@@ -1,0 +1,27 @@
+
+<!doctype html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./views/css/index.css">
+    <title>Detail Mission</title>
+</head>
+<body>
+<nav class="faker__nav">
+    <span class="faker__title">Detail Mission : Twig/Faker</span>
+</nav>
+
+<table class=faker__table>
+    <th>index</th>
+    <th>name</th>
+    <th>age</th>
+    <th>email</th>
+    {for user in users}
+    <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.age }}</td>
+        <td>{{ user.email }}</td>
+    </tr>
+    {endfor}
+</table>
+</body>
