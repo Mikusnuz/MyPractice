@@ -1,20 +1,23 @@
-body{
-    display:flex;
-    flex-flow: wrap column;
-    justify-content: center;
-    align-items: center;
-    }
-.yearSelect{
-    width: 30%;
-    height: 70px;
-    font-size:35px;
+body {
+  display: flex;
+  flex-flow: wrap column;
+  justify-content: center;
+  align-items: center;
 }
-.smarty__nav{
-    display:flex;
-    width: 100%;
-    justify-content:center;
-    border-bottom:1px solid #EAEAEA;
-    margin:10px;
-    font-size: 50px;
-    margin-bottom:10px;
+.yearSelect {
+  width: 30%;
+  height: 50px;
+  font-size: 25px;
+}
+.smarty__nav {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  border-bottom: 1px solid #eaeaea;
+  margin: 10px 10px 30px 10px;
+  padding-bottom: 10px;
+  font-size: 50px;
+}
+.smarty__wrap {
+  display: none;
 }

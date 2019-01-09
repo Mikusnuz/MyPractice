@@ -11,17 +11,22 @@
     <span class="faker__title">Detail Mission : Smarty / Holiday</span>
 </nav>
 <body>
-    <select class="yearSelect" onchange="changeYear()">
+    <select class="yearSelect" onchange="changeYear()" id="year">
+        <option value="-">------</option>        
         <option value="2015">2015</option>
         <option value="2016">2016</option>
         <option value="2017">2017</option>
         <option value="2018">2018</option>
         <option value="2019">2019</option>
     </select>
-    {foreach $holiday as $array}
+    {foreach from=$holiday key=wrap item=array}
+    <div class="smarty__wrap" id="{$wrap}">
         {foreach from=$array key=key item=value}
-               <div type="hidden"> {$key} - {$value}</div>
+               <div> {$key} - {$value}</div>
         {/foreach}
+    </div>
+    <input type="hidden" id="hidden" value="null"></input>
     {/foreach}
+    {block name=footer}{/block}
 </body>
 </html>

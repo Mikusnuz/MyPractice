@@ -2,7 +2,7 @@
 
 function initSmarty(){
 
-    require 'C:\Users\JSK\Documents\php-7.3.0-nts-Win32-VC15-x64\includes\smarty\Smarty.class.php';
+    require 'C:\Users\jooon\Desktop\php\includes\smarty\Smarty.class.php';
     $smarty = new Smarty();
     $smarty->template_dir = './templates';
     $smarty->compile_dir = './templates_complete';
@@ -15,10 +15,10 @@ function initSmarty(){
 function accessAPI($year, $month){
 
     $ch = curl_init();
-    $url = 'http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo'; /*URL*/
-    $queryParams = '?' . urlencode('ServiceKey') . '=c4a7c5MTcGaxJIzv3TprEsY3cehmLqdwsQO5oFy8HHEDGy7VMn6r2SD4klHscHZvseCm%2F0P8rDoEEhUvBuTpbQ%3D%3D'; /*Service Key*/
-    $queryParams .= '&' . urlencode('solYear') . '=' . urlencode($year); /*연*/
-    $queryParams .= '&' . urlencode('solMonth') . '=' . urlencode(($month<10)?'0'.$month:$month); /*월*/
+    $url = 'http://apis.data.go.kr/B090041/openapi/service/SpcdeInfoService/getRestDeInfo';
+    $queryParams = '?' . urlencode('ServiceKey') . '=c4a7c5MTcGaxJIzv3TprEsY3cehmLqdwsQO5oFy8HHEDGy7VMn6r2SD4klHscHZvseCm%2F0P8rDoEEhUvBuTpbQ%3D%3D';
+    $queryParams .= '&' . urlencode('solYear') . '=' . urlencode($year);
+    $queryParams .= '&' . urlencode('solMonth') . '=' . urlencode(($month<10)?'0'.$month:$month);
 
     curl_setopt($ch, CURLOPT_URL, $url . $queryParams);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
@@ -53,7 +53,7 @@ function loopHoliday(){
     return $holiday_items;
 }
 
-function runSmarty(){
+function renderSmarty(){
     
     $smarty=initSmarty();
     $holiday=loopHoliday();
@@ -61,6 +61,6 @@ function runSmarty(){
     $smarty->display('block.tpl');
 }
 
-runSmarty();
+renderSmarty();
 
 ?>
