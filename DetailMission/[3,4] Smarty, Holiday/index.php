@@ -28,6 +28,7 @@ function accessAPI($year, $month){
     curl_close($ch);
     $xml=simplexml_load_string($response);
     
+    
     return $xml;
 }
 

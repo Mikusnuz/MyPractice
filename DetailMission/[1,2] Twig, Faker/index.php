@@ -27,7 +27,6 @@ for($i=0;$i<100000;$i++){
     $users[$i]['name']=$faker->name;
     $users[$i]['age']=$faker->numberBetween($min = 1, $max = 90);
     $users[$i]['email']=$faker->email;
-    
 }
 
 echo $twig->render('index.html',array('users'=>
