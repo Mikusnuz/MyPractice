@@ -1,0 +1,1 @@
+ffmpeg -re -i sample.mp4 -v 0 -vcodec mpeg4 -f mpegts udp://127.0.0.1:1934
