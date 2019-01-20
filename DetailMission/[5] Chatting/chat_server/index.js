@@ -1,22 +1,45 @@
-var app = require('express');
-var exp = express();
-var http = require('http').Server(app);
-var io = require('socket.io')(http);
+let express = require("express");
+let app = express();
+let http = require("http").Server(app);
+let io = require("socket.io")(http);
+var path = require("path");
+var UDPPORT = 3001;
+var TCPPORT = 3000;
+var HOST = "127.0.0.1";
+var dgram = require("dgram");
+var server = dgram.createSocket("udp4");
 
-app.get('/', function(req, res){
-  res.sendFile(__dirname + '/index.html');
+function sendTo(msg) {
+  msg = new Buffer(msg);
+  server.send(msg, 0, msg.length, TCPPORT, HOST, (err, bytes) => {
+    if (err) throw err;
+    console.log("Server => Client : " + msg);
+  });
+}
+
+app.get("/", function(req, res) {
+  res.sendFile(__dirname + "/index.html");
 });
 
-io.on('connection', function(socket){
-  console.log('a user connected');
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
+server.on("message", (msg, remote) => {
+  io.emit("chat message", msg.toString());
+});
+
+io.on("connection", socket => {
+  socket.on("chat message", msg => {
+    io.emit("chat message", msg.toString());
+    sendTo(msg);
   });
 });
 
-http.listen(3000, function(){
-  console.log('listening on *:3000');
+http.listen(TCPPORT, () => {
+  console.log("listening on *: SOCKETIO");
+});
+server.on("listening", () => {
+  var addr = server.address();
+  console.log("listening on *: UDP");
 });
 
-exp.use(app.static('./css'));
-exp.use(app.static('./js'));
+server.bind(UDPPORT, HOST);
+app.use(express.static(path.join(__dirname, "css")));
+app.use(express.static(path.join(__dirname, "js")));

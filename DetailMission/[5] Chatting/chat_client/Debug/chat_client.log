@@ -1,0 +1,4 @@
+﻿  chat_client.c
+c:\users\jooon\desktop\mofas_jsk\detailmission\[5] chatting\chat_client\chat_client.c(21): warning C4013: 'gets'이(가) 정의되지 않았습니다. extern은 int형을 반환하는 것으로 간주합니다.
+c:\users\jooon\desktop\mofas_jsk\detailmission\[5] chatting\chat_client\chat_client.c(31): warning C4113: 'DWORD (__stdcall *)()'은(는) 'LPTHREAD_START_ROUTINE'과(와) 매개 변수 목록이 다릅니다.
+  chat_client.vcxproj -> C:\Users\jooon\Desktop\Mofas_JSK\DetailMission\[5] Chatting\chat_client\Debug\chat_client.exe
