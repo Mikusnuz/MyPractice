@@ -2,12 +2,10 @@
 
 ---
 
-## 이론 미션
+## 이론 공부
 
-- IntelliJ
-- Visual Studio
+
 - Zsh
-- Oh My Zsh
 - MVC Pattern
 - MVP Pattern
 - MVVM Pattern
@@ -21,12 +19,11 @@
 - UML
 - UML Tools (Rational rose, Borland together, StarUML)
 - ECB (Entity, Control, Boundary)
-- Blockly
 - coq Language
 
 ---
 
-## 실전 미션
+## 실전 공부
 
 1. **[PHP]** composer를 이용하여 twig을 설치하고 템플릿 상속을 구현한 뒤 설명하라.
 2. **[PHP]** faker를 이용하여 10만개의 가상데이터를 만들어라.
