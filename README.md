@@ -1,4 +1,4 @@
-# Mofas_Junsu-Kim
+#Junsu-Kim
 
 이론, 실전 스터디 내용입니다.
 
